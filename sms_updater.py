@@ -5,8 +5,6 @@ from hvz_scraper.spiders.players_spider import PlayersSpider
 from twilio.rest import TwilioRestClient
 import json
 
-CELERYD_CONCURRENCY = 10
-
 class CallBack:
     def __init__(self, data, type):
         self.data = data
