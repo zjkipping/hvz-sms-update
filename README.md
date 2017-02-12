@@ -18,7 +18,10 @@ Finally run the "run.bat" (you can change the ascribed timeouts in the file to y
 ## Extra Inclusions
 Included is a version (can be old) of the "http://muzombies.org/playerlist?filterBy=all&sortBy=name&pageBy=1000" page.
 This is in case you want to re-use the scraper in this project and run your own processes on the data received from it.  
-The html page can be updated with a new simple spider file with the below code:
+The html file is a great resource when figuring where to xpath to get the data from the website you want.  
+More help on scraping can be found here https://doc.scrapy.org/en/latest/  
+
+The html file can be updated with a new simple spider file with the below code:
 ```python
 import scrapy
 
