@@ -10,7 +10,7 @@ Scrapy - https://doc.scrapy.org/en/latest/intro/install.html
 ## Running For Yourself
 Make sure above requirements/installations are met.
 
-To run the project yourself and receive updates, sign up for a free trial account on Twilio here:  
+To run the project yourself and receive updates, sign up for a free trial account on Twilio here:
 https://www.twilio.com/signup  
 After this just plug in your Account SID and Auth Token where the comments in the code of "sms-updater.py" point to.
 And also fill in your Twilio given sms number and your personal number where shown by the comments.

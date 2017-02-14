@@ -5,6 +5,7 @@ from hvz_scraper.spiders.players_spider import PlayersSpider
 from twilio.rest import TwilioRestClient
 import json
 
+
 class CallBack:
     def __init__(self, data, type):
         self.data = data
@@ -52,7 +53,7 @@ def sendSMS_Updates(changes):
         for change in changes:
             client.messages.create(to="+1234567890", from_="+1234567890", # Also make sure to replace these numbers with your Twilio and personal number
                                    body=(change.name + " changed from " + change.orig.upper() + " to " + change.new.upper() + " link to profile: " + change.link))
-            print(change.name, " changed from ", change.orig, " to ", change.new, " link to profile: ", change.link.replace("//", ""))
+            print(change.name, " changed from ", change.orig, " to ", change.new, " link to profile: ", change.link)
 
 process = CrawlerProcess(get_project_settings())
 print("Attempting to get Old Data")
@@ -66,4 +67,4 @@ if callback.type == "old":
     sendSMS_Updates(changes)
     old_data = new_data
 else:
-    print("No old data to go off need to re run again to receive updates")
+    print("No old data to go off of, need to re-run again to receive sms updates")

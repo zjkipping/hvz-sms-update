@@ -1,5 +1,6 @@
 import scrapy
 
+
 class PlayerInfo(scrapy.Item):
     name = scrapy.Field(serializer=str)
     status = scrapy.Field(serializer=str)
@@ -30,5 +31,6 @@ class PlayersSpider(scrapy.Spider):
                 elif y == 3:
                     player_object['status'] = td.xpath('text()')[0].extract()
                 y+=1
-            player_object['status'] = ''.join( player_object['status'].split())
+            player_object['status'] = ''.join(player_object['status'].split())
+            player_object['link'] = player_object.replace("//", "")
             yield player_object
