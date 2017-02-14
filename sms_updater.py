@@ -50,11 +50,10 @@ def sendSMS_Updates(changes):
         client = TwilioRestClient("ACxxxxxxxxxxxxx", "xxxxxxxxxxxxxxxxxxx") # replace these values with your own Twilio Account SID and Auth Token
                                                                             # free trial can be signed up for here https://www.twilio.com/try-twilio
         for change in changes:
-            client.messages.create(to="+16368753656", from_="+16364925025",
+            client.messages.create(to="+1234567890", from_="+1234567890", # Also make sure to replace these numbers with your Twilio and personal number
                                    body=(change.name + " changed from " + change.orig.upper() + " to " + change.new.upper() + " link to profile: " + change.link))
             print(change.name, " changed from ", change.orig, " to ", change.new, " link to profile: ", change.link.replace("//", ""))
 
-x = 1
 process = CrawlerProcess(get_project_settings())
 print("Attempting to get Old Data")
 callback = getPlayerData(process)
@@ -66,6 +65,5 @@ if callback.type == "old":
     changes = getPlayerChanges(old_data, new_data)
     sendSMS_Updates(changes)
     old_data = new_data
-    x += 1
 else:
     print("No old data to go off need to re run again to receive updates")

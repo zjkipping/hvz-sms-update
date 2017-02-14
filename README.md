@@ -12,7 +12,8 @@ Make sure above requirements/installations are met.
 
 To run the project yourself and receive updates, sign up for a free trial account on Twilio here:  
 https://www.twilio.com/signup  
-After this just plug in your Account SID and Auth Token where the comments in the code of "sms-updater.py" point to.  
+After this just plug in your Account SID and Auth Token where the comments in the code of "sms-updater.py" point to.
+And also fill in your Twilio given sms number and your personal number where shown by the comments.
 Finally run the "run.bat" (you can change the ascribed timeouts in the file to your own preferences)
 
 ## Extra Inclusions
